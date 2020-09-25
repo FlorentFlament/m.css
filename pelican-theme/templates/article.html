@@ -137,6 +137,9 @@
         {% macro footer() %}{% include "article_footer.html" %}{% endmacro %}
         {{ footer()|rtrim|indent(8) }}
       </footer>
+      {% if DISQUS_SITENAME %}
+      {% include 'disqus_script.html' %}
+      {% endif %}
     </article>
     {% endif %}
 {% endblock %}
